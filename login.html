@@ -1,326 +1,39 @@
-
-
-
-<!DOCTYPE html>
-<html>
-	<head>
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<title>삼성 청년 SW 아카데미</title>
-<link rel="shortcut icon" href="/asset/images/common/favicon.ico">
-
-
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-
-<meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="285a8e74-7f11-45a0-b5e0-b58ef29d87d4" />
-
-
-<link rel="stylesheet" type="text/css" href="/asset/css/plugin/swiper.min.css">
-<link rel="stylesheet" type="text/css" href="/asset/css/plugin/select2.min.css">
-<link rel="stylesheet" type="text/css" href="/asset/css/style.min.css">
-
-<script type="text/javascript" src="/asset/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="/asset/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="/asset/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="/asset/js/select2/select2.min.js"></script>
-<script type="text/javascript" src="/asset/js/tweenmax/TweenMax.js"></script>
-<script type="text/javascript" src="/asset/js/swiper/swiper.min.js"></script>
-<script type="text/javascript" src="/asset/js/front-ui.min.js"></script>
-
-
-
-
-
-
-
-
-<script type="text/javascript" src="/html/js/common/MapUtil.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="/html/js/common/StringUtil.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="/html/js/common/JqueryUtil.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="/html/js/common/WebUtil.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="/html/js/common/TagLibUtil.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="/html/js/common/util/util.jqMessage.min.js" charset="utf-8"></script>
-<script type="text/javascript">
-///util.valid.js 사용
-var _CTX = "";
-var _CONTEXT_ROOT = '';
-
-var commonMsgs = {};
-var msgMap  = new Map();
-msgMap.put("required","[{0}]은(는) 필수값입니다.");
-msgMap.put("minLength","[{0}]은(는) {1}글자 이상 입력해 주세요.");
-msgMap.put("maxLength","[{0}]은(는) {1}글자 이하로 입력해 주세요.");
-msgMap.put("rangeLength","[{0}]은(는) {1} 글자 이상 {2} 글자 이하로 입력해 주세요.");
-msgMap.put("minByte","[{0}]은(는) {1}Byte (한글{2}자) 이상 입력해 주세요.");
-msgMap.put("maxByte","[{0}]은(는) {1}Byte (한글{2}자) 이하로 입력해 주세요.");
-msgMap.put("rangeByte","[{0}]은(는) {1} Byte 이상 {2} Byte 이하로 입력해 주세요.");
-msgMap.put("minNumber","[{0}]은(는) {1}이상 입력 해야 합니다.");
-msgMap.put("maxNumber","[{0}]은(는) {1}이하로 입력 해야 합니다.");
-msgMap.put("number","[{0}]은(는) 숫자만 입력할 수 있습니다.");
-msgMap.put("rangeNumber","[{0}]은(는) {1}~{2} 사이의 값으로 입력해 주세요.");
-msgMap.put("maxStr","[{0}]은(는) {1}자 이하로 입력해 주세요.");
-
-$(window).load(function() {    
-	$('.loading-circle').hide();  
-});
-</script>
-
-<script type="text/javascript" src="/html/js/common/util/util.valid.min.js" charset="utf-8"></script>
-
-	</head>
-	<body class="log-in">
-		<div id="wrap">
-			<header id="header" class="header"></header>
-			
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" src="/html/js/common/login/sysLogin.js" charset="utf-8"></script>
-<script type="text/javascript">
-
-	// 로그인
-	_URL_LOGIN = "/comm/login/SecurityLoginCheck.do";
-	_URL_PWD_SEARCH = "/edu/login/pwdsearch/pwdSearchForm.do";
-	_URL_INDEX = "/edu/main/index.do";
-	$(document).ready(function() {
-		_FRM = document.loginForm;
-		
-		
-		
-
-		
-		
-		
-	    
-
-		//엔터키 클릭시 로그인
-		$('.container').each(function() {
-	        $(this).find('input').keypress(function(e) {
-	            if(e.which == 10 || e.which == 13) {
-	            	fnLogin();
-	            	return false;
-	            }
-	        });
-	    });
-		
-		$("#userId").val(getCookie('lgnId'));
-
-		//아이디저장을 체크 했을 경우 체크 2018.12.09 woo 
-		if (getCookie('lgnId')) {
-			$("#idSave").prop("checked", true);
-		}
-
-	});
-</script>
-<div class="container" data-page="login" data-layout="first-access">
-	<div class="content login">
-		<div class="case1 bg-login active"></div>
-        
-        
-	
-	    <div class="section">
-	    	<form name="loginForm" method="post" >
-		        <div class="login-area">
-		            <div class="in-head">
-		                <h1><img src="/asset/images/logo.png" alt="SAMSUNG SW ACADEMY FOR YOUTH"></h1>
-		            </div>
-		            <!-- 로그인 필드셋 -->
-		            <div class="field-set log-in">
-		                <div class="form-inner">
-		                    <div class="in-row">
-		                        <label for="userId" class="label">아이디</label>
-		                        <input type="text" name="userId" id="userId" class="form-control" placeholder="ID">
-		                    </div>
-		                    <div class="in-row">
-		                        <label for="userPwd" class="label">비밀번호</label>
-		                        <input type="password" name="userPwd" id="userPwd" class="form-control" placeholder="PASSWORD">
-		                    </div>
-		                </div>
-		                <div class="form-util">
-		                    <label class="check-box" for="idSave">
-		                        <input type="checkbox" name="idSave" id="idSave" >
-		                        <span class="fake-label"></span> 아이디 저장
-		                    </label>
-		                </div>
-		                <div class="form-btn">
-		                    <a href="javascript:void(0);" class="btn btn-lg btn-wide btn-primary" onclick="fnLogin();return false;">로그인</a>
-		                </div>
-		            </div>
-		
-		            <div class="in-util tac">
-		                <ul class="partition-list">
-		                    
-		                    <li><a href="/edu/login/pwdsearch/pwdSearchForm.do">비밀번호 찾기</a></li>
-		                </ul>
-		            </div>
-		            
-		            <div class="in-foot tac">
-		                <strong>Help Desk</strong><em><a href="tel:02-3429-5041">02-3429-5041</a></em><br>
-		                <span> 평일 상담시간 : 09:00 ~ 18:00</span>
-		            </div>
-	            </form>
-	        </div>
-	
-	        <!-- Swiper -->
-	        <div class="login-slide swiper-container hidden-field">
-	            <div class="visual-area swiper-wrapper">
-	                <div class="txt n1 active">
-                        <em>SAMSUNG SW ACADEMY <br>FOR YOUTH</em>
-                        <p>SSAFY에 오신것을 환영합니다.</p>
-                    </div>
-                    
-                        
-                        
-                    
-                    
-                        
-                        
-                    
-	            </div>
-	            <!-- Add Pagination -->
-                
-                	
-                    
-                    
-                
-                <div class="swiper-control"></div>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>RangE Community</title>
+
+    <link href="js\bootstrap.min.css" rel="stylesheet">
+    <link href="css\login.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+    <main class="form-signin">
+        <form>
+            <img class="mb-4" src="img\range1.jpg" alt="" width="72" height="57">
+            <h1 class="h3 mb-3 fw-normal">쉿 아무도 몰라</h1>
+            <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">아이디</label>
             </div>
-        </div>
-    </div>
-</div>
-
-
-<script type="text/javascript">
-	function init(){
-	      samsungEventManager.addResize(onResizeLogin);
-	      onResizeLogin();
-	      jQuery(window).resize(function(event){samsungEventManager.resize(event);});
-	   	  //마크업 적용 2018-12-09 footer fixed 함수 추가 woo
-	      footerFixed();
-	}
-	
-	$("#wrap").addClass("login").css({
-	    "height":"auto"
-	});
-	$("#footer").css("display","none");
-	
-	function  onResizeLogin(){
-	    if(WINDOW_WIDTH > mobileW ){
-	        $('.container[data-page="login"] , #warp').css({
-	            height:WINDOW_HEIGHT
-	        });
-            if ($("#footer").css("display") != "none") {
-                $("#footer").css("display", "")
-            }
-        }else{
-	        $('.container[data-page="login"] , #warp').css({
-	            height:""
-	        });
-            if ($("#footer").css("display") == "none") {
-                $("#footer").css("display", "");
-            }
-        }
-	
-	    function remove(){
-
-    }
-    }
-	
-	init();
-
-	
-    //$(window).resize(loginResize);
-</script>
-			
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript">
-	var _URL_FOOTER_POPUP = '/edu/main/footerPopup.do';
-	
-	
-	function fnPrivacyPopup() {
-		fnOpenPopup({
-			'url' : _URL_FOOTER_POPUP,
-			'name' : 'privacyPopup',
-			'param' : {'footerType' : 'privacy'},
-			'title' : '개인정보처리방침',
-			'sizeClass' : 'sz3'
-		});
-	}
-</script>
-
-<footer id="footer" class="footer" data-layout="first-access" data-page="login">
-    <div class="foot-inner">
-        <div class="float-base">
-            <div class="btn-area"><a type="button" class="btn-text" onclick="fnPrivacyPopup();">개인정보처리방침</a></div>
-            <p class="align-right">Copyright © SAMSUNG All Rights Reserved.</p>
-        </div>
-    </div>
-</footer>
-
-		</div>
-		
-		<div class="loading-circle">
-		    <div class="loader">
-		        <svg class="circular-loader"viewBox="25 25 50 50" >
-		            <circle class="loader-path" cx="50" cy="50" r="20" fill="none" stroke="#3c90e2" stroke-width="4" />
-		        </svg>
-		    </div>
-		</div>
-		
-		<div id="layerPopup"></div>
-	</body>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">비밀번호</label>
+            </div>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> 아이디 기억하기
+                </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            <p class="mt-5 mb-3 text-muted">&copy;team toy since 2022.02.15</p>
+        </form>
+    </main>
+</body>
 </html>
