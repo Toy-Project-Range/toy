@@ -11,16 +11,25 @@
 
     <link href="js\bootstrap.min.css" rel="stylesheet">
     <link href="css\login.css" rel="stylesheet">
+    
+    <script>
+            $("#btnLogin").click(function(){
+                var userId = $("#floatingInput").val(); admin
+                var userPw = $("#floatingPassword").val(); admin
+                
+                location.href = "loginProc.do?userId="+userId+"&userPw="+userPw;
+            });
+    </script>
 </head>
-
 <body class="text-center">
     <main class="form-signin">
-        <form>
-            <img class="mb-4" src="img\range1.jpg" alt="" width="72" height="57">
+    
+        <form name="form-submit" method="post" action="loginProc">
+            <img class="mb-4" src="img\range.jpg" alt="" width="200" height="200">
             <h1 class="h3 mb-3 fw-normal">쉿 아무도 몰라</h1>
             <div class="form-floating">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">아이디</label>
+                <label for="floatingInput">아이디</label>
             </div>
             <div class="form-floating">
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
@@ -28,12 +37,13 @@
             </div>
             <div class="checkbox mb-3">
                 <label>
-                    <input type="checkbox" value="remember-me"> 아이디 기억하기
+                    <input type="checkbox" value="remember-me">아이디 기억하기
                 </label>
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-            <p class="mt-5 mb-3 text-muted">&copy;team toy since 2022.02.15</p>
+            <button class="w-100 btn btn-lg btn-primary" type="submit" id="btnLogin">로그인</button>
+            <p class="mt-5 mb-3 text-muted">&copy;team toy since 2022.02.15 </p>
         </form>
+        
     </main>
 </body>
 </html>
