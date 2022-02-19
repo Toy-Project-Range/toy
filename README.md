@@ -41,6 +41,7 @@
 
 - href 경로 스프링에 맞게 수정 
 - 로그인 버튼 클릭시 loginProc.do로 넘겨주는 함수 구현
+- 깃허브 config user.name
 
 백
 - 깃허브 레파지토리 생성
