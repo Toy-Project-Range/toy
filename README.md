@@ -13,7 +13,8 @@
     
     
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/488af5a5-66ed-46ae-8d58-5ea97b261e4f/Untitled.png)
+![2월12일](https://user-images.githubusercontent.com/93043822/154786079-148b9955-a629-41cd-8420-79237ad91582.png)
+
 
 - 로그인 시, 로그인 성공페이지, 로그인실패페이지 2페이지로 나뉘는 편 (개인정보보호법:아이디가 틀려도 비번도 같이 틀렸다고 알려야 함)
 - 로그인했는데 로그아웃을 안 하면, 언제 자동으로 로그아웃해줄건지? - 스프링에서 토큰(로그인할때마다 세션에 따라(시간정보) 생기는 고유 값, 시간만료 有) 발급
