@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: lion1
+=======
+Built-By: S_hyun
+>>>>>>> c20eee2df7cbd64fe62d1e912e2d58421d9bb845
 Build-Jdk: 1.8.0_192
 Created-By: Maven Integration for Eclipse
 
