@@ -117,3 +117,4 @@ replay_pid*
 
 # End of https://www.toptal.com/developers/gitignore/api/java,eclipse,visualstudiocode
 rangEGuard/target/m2e-wtp/web-resources/META-INF/maven/com.range/rangEGuard/pom.properties
+rangEGuard/.classpath
