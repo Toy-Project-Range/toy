@@ -9,8 +9,8 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>RangE Community</title>
 
-    <link href="../../resources/css/login.css" rel="stylesheet">
-    <link href="../../resources/js/bootstrap.min.css" rel="stylesheet">
+    <link href="$(path)/resources/css/login.css" rel="stylesheet">
+    <link href="$(path)/resources/js/bootstrap.min.css" rel="stylesheet">
     
     <script>
         $("#btnLogin").click(function(){
