@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+C:\github\toy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4023674864.index
+\rangEGuard\src\main\java
