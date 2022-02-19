@@ -166,6 +166,5 @@ replay_pid*
 
 # Support for Project snippet scope
 
-rangEGuard/target/m2e-wtp/web-resources/META-INF/maven/com.range/rangEGuard/pom.properties
 rangEGuard/.classpath
-rangEGuard/target/m2e-wtp
+rangEGuard/target/
