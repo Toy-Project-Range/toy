@@ -12,8 +12,8 @@
 
 
 
-    <link href="${path}/resources/css/login.css" rel="stylesheet">
     <link href="${path}/resources/js/bootstrap.min.css" rel="stylesheet">
+    <link href="${path}/resources/css/login.css" rel="stylesheet">
 
     
     <script>
@@ -28,19 +28,19 @@
         });
     </script>
 </head>
+
 <body class="text-center">
     <main class="form-signin">
-
         <form name="form-submit" method="post" action="loginProc">
-            <img class="mb-4" src="${path}/resources/img/RangEBackImg.jpg" alt="" width="200" height="200">
+            <img class="mb-4 rounded-pill" src="${path}/resources/img/animal/RangEBackImg.jpg" alt="" width="200" height="200">
             <h1 class="h3 mb-3 fw-normal">쉿 아무도 몰라</h1>
             <div class="form-floating">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">아이디</label> 
+                <label for="floatingInput"><img class="" src="${path}/resources/img/icon/account.png" alt="" width="18" height="18">아이디</label> 
             </div>
             <div class="form-floating">
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">비밀번호</label> 
+                <label for="floatingPassword"><img class="" src="${path}/resources/img/icon/password.png" alt="" width="15" height="15">비밀번호</label> 
             </div>
             <div class="checkbox mb-3">
                 <label>
