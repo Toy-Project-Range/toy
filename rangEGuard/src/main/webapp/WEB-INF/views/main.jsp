@@ -1,6 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
 <!doctype html>
-<html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,31 +10,37 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>RangE Community</title>
 
-    <link href="../../resources/js/bootstrap.min.css" rel="stylesheet">
-    <link href="../../resources/css/login.css" rel="stylesheet">
+
+
+    <link href="${path}/resources/css/login.css" rel="stylesheet">
+    <link href="${path}/resources/js/bootstrap.min.css" rel="stylesheet">
+
     
     <script>
         $("#btnLogin").click(function(){
-            var userId = $("#floatingInput").val(); admin
-            var userPw = $("#floatingPassword").val(); admin
+            var userId = $("#floatingInput").val();
+            var userPw = $("#floatingPassword").val();
             
-            location.href = "../../loginProc.do?userId="+userId+"&userPw="+userPw;
+            location.href = "loginProc.do?userId="+userId+"&userPw="+userPw;
+            // loginProc.do?userId=admin&userPw=1234
+            // xml : 매핑 해주는 파일, login.jsp -> loginChk.java
+            // login.jsp파일을 소스가 안보이게 바꿔서 화면출력 -> xml 
         });
-        </script>
+    </script>
 </head>
 <body class="text-center">
     <main class="form-signin">
-        
+
         <form name="form-submit" method="post" action="loginProc">
-            <img class="mb-4" src="../../resources/img/RangEBackImg.jpg" alt="" width="200" height="200">
+            <img class="mb-4" src="${path}/resources/img/RangEBackImg.jpg" alt="" width="200" height="200">
             <h1 class="h3 mb-3 fw-normal">쉿 아무도 몰라</h1>
             <div class="form-floating">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput"><img class="mr-10" src="../../resources/img/account_bk.png" alt="" width="20" height="20">아이디</label>
+                <label for="floatingInput">아이디</label> 
             </div>
             <div class="form-floating">
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword"><img class="mr-10" src="../../resources/img/password_bk.png" alt="" width="20" height="20">비밀번호</label>
+                <label for="floatingPassword">비밀번호</label> 
             </div>
             <div class="checkbox mb-3">
                 <label>
@@ -44,7 +51,13 @@
             <p class="mt-5 mb-3 text-muted">&copy;team toy since 2022.02.15 </p>
         </form>
     </main>
-    <!-- <link href="" rel="stylesheet">
+    <!-- <link href="../../resources/js/bootstrap.min.js" rel="stylesheet">
     <link href="../../resources/js/jquery-1.11.1.min.js" rel="stylesheet"> -->
 </body>
 </html>
+<!-- MVC 
+모델, 뷰, 컨트롤러
+뷰 페이지  -> 프론트 
+모델 -> 데이터를 가지고 있는 페이지들 - DB랑 통신
+컨트롤러 -> 동작을 하는 페이지들 - 프론트랑 보여지는 페이지들
+-->
