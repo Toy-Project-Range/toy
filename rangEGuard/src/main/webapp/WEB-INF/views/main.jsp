@@ -2,6 +2,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 <!doctype html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,54 +12,77 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>RangE Community</title>
 
-
-
-    <link href="${path}/resources/css/login.css" rel="stylesheet">
+    <!-- <link href="../../resources/css/main.css" rel="stylesheet"> -->
     <link href="${path}/resources/js/bootstrap.min.css" rel="stylesheet">
 
-    
-    <script>
-        $("#btnLogin").click(function(){
-            var userId = $("#floatingInput").val();
-            var userPw = $("#floatingPassword").val();
-            
-            location.href = "loginProc.do?userId="+userId+"&userPw="+userPw;
-            // loginProc.do?userId=admin&userPw=1234
-            // xml : 매핑 해주는 파일, login.jsp -> loginChk.java
-            // login.jsp파일을 소스가 안보이게 바꿔서 화면출력 -> xml 
-        });
-    </script>
-</head>
-<body class="text-center">
-    <main class="form-signin">
 
-        <form name="form-submit" method="post" action="loginProc">
-            <img class="mb-4" src="${path}/resources/img/RangEBackImg.jpg" alt="" width="200" height="200">
-            <h1 class="h3 mb-3 fw-normal">쉿 아무도 몰라</h1>
-            <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">아이디</label> 
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">랑이수호대</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="d-flex mx-4">
+                        <input class="form-control me-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-secondary my-4 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <img class="ml-5 mr-5 " src="${path}/resources/img/subicon/account_gr.png" alt="" width="40" height="40">
+                </div>
             </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">비밀번호</label> 
+        </nav>
+    </header>
+    <main>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="${path}/resources/img/animal/RangEBackImg3.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="${path}/resources/img/animal/RangEBackImg4.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="${path}/resources/img/animal/RangEBackImg5.jpg" class="d-block w-100" alt="...">
+              </div>
             </div>
-            <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me">아이디 기억하기
-                </label>
-            </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit" id="btnLogin">로그인</button>
-            <p class="mt-5 mb-3 text-muted">&copy;team toy since 2022.02.15 </p>
-        </form>
+          </div>
     </main>
-    <!-- <link href="../../resources/js/bootstrap.min.js" rel="stylesheet">
-    <link href="../../resources/js/jquery-1.11.1.min.js" rel="stylesheet"> -->
+    <footer>
+
+    </footer>
 </body>
+
 </html>
-<!-- MVC 
-모델, 뷰, 컨트롤러
-뷰 페이지  -> 프론트 
-모델 -> 데이터를 가지고 있는 페이지들 - DB랑 통신
-컨트롤러 -> 동작을 하는 페이지들 - 프론트랑 보여지는 페이지들
--->
