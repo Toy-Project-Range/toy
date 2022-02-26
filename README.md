@@ -47,3 +47,13 @@
 백
 - pom.xml 일부 수정
 - 프로젝트 java.lang.classnotfoundexception 문제 해결(Maven 추가)
+
+### [02.26 : 2월정리 및 서류작성](MOM/20220226.md)
+프론트
+- 메인페이지 수정 : bootstrap JS bundle 추가 -> navbar, carousel 수정, footer 추가
+- 서류 작성
+- 페이지 구성도, 로그인 페이지 구성도 작성
+
+백    
+- Homecontroller, security-context.xml 작성
+- Model and Viuw 학승
