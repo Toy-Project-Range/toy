@@ -11,39 +11,36 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class HomeController {
-	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
-	@RequestMapping("/home.do")
-	public ModelAndView home() {
-		ModelAndView mav = new ModelAndView();
-		
-		mav.addObject("serverContry", "Korea");
-		mav.setViewName("home");
-		
-		return mav;
-	}
-	
-	@RequestMapping("/login.do")
-	public ModelAndView login() {
-		ModelAndView mav = new ModelAndView();
-		
-		mav.addObject("data", "login");
-		mav.setViewName("login");
-		
-		return mav;
-	}
-	
-	@RequestMapping("/main.do")
-	public ModelAndView main() {
-		ModelAndView mav = new ModelAndView();
-		
-		mav.setViewName("main");
-		
-		return mav;
-	}
-	
+
+    private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+
+    /**
+     * Simply selects the home view to render by returning its name.
+     */
+    @RequestMapping("/home.do")
+    public ModelAndView home() {
+        ModelAndView mav = new ModelAndView();
+
+        mav.addObject("serverContry", "Korea");
+        mav.setViewName("home");
+
+        return mav;
+    }
+
+    @RequestMapping("/login.do")
+    public ModelAndView login() {
+        ModelAndView mav = new ModelAndView();
+
+        mav.addObject("data", "login");
+        mav.setViewName("login");
+
+        return mav;
+    }
+
+    @RequestMapping("/loginProc")
+    public ModelAndView loginChk() {
+        ModelAndView mav = new ModelAndView();
+            mav.setViewName("main"); // 뷰의 이름
+        return mav;
+    }
 }
