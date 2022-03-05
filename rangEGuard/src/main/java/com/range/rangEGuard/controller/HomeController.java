@@ -36,11 +36,11 @@ public class HomeController {
 
         return mav;
     }
-
+    
     @RequestMapping("/loginProc")
     public ModelAndView loginChk() {
         ModelAndView mav = new ModelAndView();
-            mav.setViewName("main"); // 뷰의 이름
+            mav.setViewName("main"); // 酉곗쓽 �씠由�
         return mav;
     }
 }
