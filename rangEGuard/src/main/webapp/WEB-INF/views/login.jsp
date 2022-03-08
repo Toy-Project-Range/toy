@@ -17,22 +17,26 @@
             <link href="${path}/resources/css/login.css" rel="stylesheet">
 
 
-            <!-- <script>
-        $("#btnLogin").click(function(){
-            var userId = $("#floatingInput").val();
-            var userPw = $("#floatingPassword").val();
-            
-            location.href = "loginProc.do?userId="+userId+"&userPw="+userPw;
-            // loginProc.do?userId=admin&userPw=1234
-            // xml : 매핑 해주는 파일, login.jsp -> loginChk.java
-            // login.jsp파일을 소스가 안보이게 바꿔서 화면출력 -> xml 
-        });
-    </script> -->
+            <script>
+                function btnLogin() {
+                    var loginForm = document.formSubmit;
+                    var userId = $("#floatingInput").val();
+                    var userPw = $("#floatingPassword").val();
+                    if (!userId || !userPw) {
+                        alert("Input ID or PW");
+                    } else {
+                        loginForm.Submit();
+                    }
+                }
+                        // loginProc.do?userId=admin&userPw=1234
+                        // xml : 매핑 해주는 파일, login.jsp -> loginChk.java
+                        // login.jsp파일을 소스가 안보이게 바꿔서 화면출력 -> xml 
+            </script>
         </head>
 
         <body class="text-center">
             <main class="form-signin">
-                <form name="form-submit" method="post" action="/loginProc">
+                <form name="formSubmit" method="post" action="loginProc">
                     <img class="mb-4 rounded-pill" src="${path}/resources/img/animal/RangEBackImg.jpg" alt=""
                         width="200" height="200">
                     <h1 class="h3 mb-3 fw-normal">쉿 아무도 몰라</h1>
@@ -51,7 +55,7 @@
                             <input type="checkbox" value="remember-me">아이디 기억하기
                         </label>
                     </div>
-                    <button class="w-100 btn btn-lg btn-primary" type="submit" id="btnLogin">로그인</button>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="btnLogin()">로그인</button>
                     <p class="mt-5 mb-3 text-muted">&copy;team toy since 2022.02.15 </p>
                 </form>
             </main>
