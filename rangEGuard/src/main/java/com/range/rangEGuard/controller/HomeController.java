@@ -48,33 +48,36 @@ public class HomeController {
 	// login 페이지에서 로그인을 위해서 id랑 pw를 입력후에 jsp에서 버튼을 누르면
 	// /loginProc여기 들어와서 사용자가 입력한 값들을 저장
 	// 실제로 우리 member인지 확인
-//	@RequestMapping(value = "/loginProc", method = RequestMethod.POST)
-//	public ModelAndView loginChk(@RequestParam("userId") String Id, @RequestParam("userPw") String Pw) {
-//		System.out.println(Id);
-//		System.out.println(Pw);
-//
-//		ModelAndView mav = new ModelAndView();
-//		if (Id.equals("a@naver.com")) {
-//			if (Pw.equals("b")) {
-//				System.out.println("ok있음");
-//				mav.setViewName("main");
-//				return mav;
-//			}
-//		}
-//		 멤버인지 확인
-//  		Member member = service.memberSearch(userId, userPw);
-//
-//		System.out.println("실패");
-//		mav.setViewName("login"); // 酉곗쓽 �씠由�
-//		return mav;
-//	}
+	@RequestMapping(value = "/loginProc", method = RequestMethod.POST)
+	public ModelAndView loginChk(@RequestParam("floatingInput") String userId
+            , @RequestParam("floatingPassword") String userPw) throws Exception {
+		System.out.println(userId);
+		System.out.println(userPw);
 
-    @RequestMapping("/loginProc")
-    public ModelAndView loginChk(HttpServletRequest req) {
-    	String userId = req.getParameter("userId");
-    	System.out.println(userId);
-        ModelAndView mav = new ModelAndView();
-            mav.setViewName("main"); // 酉곗쓽 �씠由�
-        return mav;
-    }
+		ModelAndView mav = new ModelAndView();
+		if (userId.equals("a@naver.com")) {
+			if (userPw.equals("b")) {
+				System.out.println("ok있음");
+				mav.setViewName("main");
+				return mav;
+			}
+		}
+
+//  		Member member = service.memberSearch(userId, userPw);
+
+		System.out.println("실패");
+		mav.setViewName("login"); // 酉곗쓽 �씠由�
+		return mav;
+	}
+
+//    @RequestMapping(value="/loginProc", method = RequestMethod.POST)
+//    public ModelAndView loginChk(@RequestParam("floatingInput") String userId
+//            , @RequestParam("floatingPassword") String userPw) throws Exception {
+//    	System.out.println(userId);
+////    	String userId = req.getParameter("userId");
+////    	System.out.println(userId);
+//        ModelAndView mav = new ModelAndView();
+//            mav.setViewName("main"); // 酉곗쓽 �씠由�
+//        return mav;
+//    }
 }
