@@ -82,3 +82,18 @@
 
 - 로그인 기능 연습
 - DAO, DTO, Impl과 같은 구조 잡기
+
+### [03.05 : 필요한 파일 만들기(MVC구조, 게시판)](MOM/20220305.md)
+
+프론트
+
+- 메인페이지 수정 : 다양한 방식의 파비콘 추가
+- 게시판페이지 수정 : 메뉴 리스트 디자인 수정
+
+백
+
+- 로그인 기능 연습
+- jsp에서 입력한 데이터 받아오기
+- HomController-loginProc-home.jsp 구현
+- db없이 java내부에서 어떤 값과 같으면 main / 아니면 login반환해주도록 만들기
+- controller, service, dao, dto, mapper 구조 파악
