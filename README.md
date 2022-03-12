@@ -98,7 +98,7 @@
 - db없이 java내부에서 어떤 값과 같으면 main / 아니면 login반환해주도록 만들기
 - controller, service, dao, dto, mapper 구조 파악
 
-### [03.12 : DB생성, 파일 세분화](MOM/202203012.md)
+### [03.12 : DB생성, 파일 세분화](MOM/20220312.md)
 
 프론트
 
