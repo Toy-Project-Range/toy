@@ -6,7 +6,7 @@
     <link href="../../resources/css/board.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-color:#f8f8fa;">
     <div id="banner" class="text-light text-md-right text-center banner"></br></br></br>
         <h1 class="display-4 banner-heading">Welcome to Board</h1>
         <p class="lead banner-par">Test banner page</p>
@@ -25,7 +25,23 @@
                 <a class="list-group-item list-group-item-action" href="#list-item-9">🎢 유머</a>
             </div>
             <div class="col mx-5">
-                <table class="table table-hover table-lg">
+                <div class="justify-content-md-center w-75 border" style="background-color: white;height: 100%;">
+                    <form class="row justify-content-center mt-3">
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="inputMemo" placeholder="자유롭게 이야기해주세요.">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-dark p-1">
+                                <svg width="24" height="24">
+                                    <path fill="currentColor"
+                                        d="M17.21 2.23a.75.75 0 0 1 1.07-.01l3.5 3.5a.75.75 0 0 1 .011 1.05l-12 12.5a.75.75 0 1 1-1.082-1.04l8.062-8.398-2.451-2.451L4.5 17.553V20h2.75a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1-.75-.75v-3.5a.75.75 0 0 1 .21-.52zm.55 1.59-2.397 2.482 2.447 2.447 2.39-2.488-2.44-2.441z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                    <hr>
+                    <!-- <table class="table table-hover table-lg">
                     <thead>
                         <tr>
                             <th class="">번호</th>
@@ -80,8 +96,9 @@
                         <li class="page-item"><a class="page-link" href="#">Next</a></li>
                     </ul>
                 </nav>
+            </div> -->
+                </div>
             </div>
-        </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
