@@ -103,9 +103,9 @@
 프론트
 
 - 메인페이지 수정 
-  1. header, footer 등 js 상속 → navbar, modal, footer (theme.html)
-  2. navbar - profile modal 내부 디자인 수정 (theme.html)
-  3. bootstrap card, grid 방식 이용해서 프로필페이지처럼 구현
+  - header, footer 등 js 상속 → navbar, modal, footer (theme.html)
+  - navbar - profile modal 내부 디자인 수정 (theme.html)
+  - bootstrap card, grid 방식 이용해서 프로필페이지처럼 구현
 - 게시판페이지 수정 : 메뉴 리스트 디자인 수정
 
 - main 디자인, 넣을 요소 정리
