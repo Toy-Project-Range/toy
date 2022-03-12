@@ -97,3 +97,24 @@
 - HomController-loginProc-home.jsp 구현
 - db없이 java내부에서 어떤 값과 같으면 main / 아니면 login반환해주도록 만들기
 - controller, service, dao, dto, mapper 구조 파악
+
+### [03.12 : DB생성, 파일 세분화](MOM/202203012.md)
+
+프론트
+
+- 메인페이지 수정 
+1. header, footer 등 js 상속 → navbar, modal, footer (theme.html)
+2. navbar - profile modal 내부 디자인 수정 (theme.html)
+3. bootstrap card, grid 방식 이용해서 프로필페이지처럼 구현
+- 게시판페이지 수정 : 메뉴 리스트 디자인 수정
+
+- main 디자인, 넣을 요소 정리
+- 참고 [https://www.creative-tim.com/](https://www.creative-tim.com/) 
+- favicon 이용할 것만 추리기
+- 추후 백단에서 데이터 받아왔을 때 직무랑 사진 넣는 법 → js
+
+백
+
+- heidi sql 설치 / cafe 24 서버와 연결 
+- → 웹 프로젝트와 연동하고 싶었으나 지식 부족으로 나머지 시간은 공부함.
+- mybatis / JDBC / Beans / IoC ConTainer 와 같은 정의 공부 / 구글 검색. 
