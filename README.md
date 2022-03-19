@@ -122,8 +122,9 @@
 
 프론트
 
-- 게시판페이지 수정
-
+- HTML 리스트 구성을 JS 구성
+- board.js - categoryCahne() - 클릭된 태그가 아니면 흰색, 클린된 태그라면 파란색으로 클래스 추가
 백
 
 - DB erd 설계
+- Aquerytool을 이용하여 SQL로 변환
