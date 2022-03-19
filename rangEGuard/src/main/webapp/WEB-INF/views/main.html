@@ -10,6 +10,51 @@
 
 
 <body>
+  <select id="demosMenu">
+  <option selected>Choose Demo</option>
+  <option id="jquery-adapter">jQuery adapter</option>
+  <option id="active-slide">Active section and slide</option>
+  <option id="auto-height">Auto height</option>
+  <option id="autoplay-video-and-audio">Autoplay Video and Audio</option>
+  <option id="backgrounds">Background images</option>
+  <option id="backgrounds-fixed">Fixed fullscreen backgrounds</option>
+  <option id="background-video">Background video</option>
+  <option id="callbacks-v2-compatible">Callbacks version 2</option>
+  <option id="callbacks-v3">Callbacks version 3</option>
+  <option id="continuous-horizontal">Continuous horizontal</option>
+  <option id="continuous-vertical">Continuous vertical</option>
+  <option id="parallax">Parallax</option>
+  <option id="css3">CSS3</option>
+  <option id="drag-and-move">Drag And Move</option>
+  <option id="easing">Easing</option>
+  <option id="fading-effect">Fading Effect</option>
+  <option id="fixed-headers">Fixed headers</option>
+  <option id="gradient-backgrounds">Gradient backgrounds</option>
+  <option id="interlocked-slides">Interlocked Slides</option>
+  <option id="looping">Looping</option>
+  <option id="methods">Methods</option>
+  <option id="navigation-vertical">Vertical navigation dots</option>
+  <option id="navigation-horizontal">Horizontal navigation dots</option>
+  <option id="navigation-tooltips">Navigation tooltips</option>
+  <option id="no-anchor">No anchor links</option>
+  <option id="normal-scroll">Normal scrolling</option>
+  <option id="normalScrollElements">Normal scroll elements</option>
+  <option id="offset-sections">Offset sections</option>
+  <option id="one-section">One single section</option>
+  <option id="reset-sliders">Reset sliders</option>
+  <option id="responsive-auto-height">Responsive Auto Height</option>
+  <option id="responsive-height">Responsive Height</option>
+  <option id="responsive-width">Responsive Width</option>
+  <option id="responsive-slides">Responsive Slides</option>
+  <option id="scrollBar">Scroll bar enabled</option>
+  <option id="scroll-horizontally">Scroll horizontally</option>
+  <option id="scrollOverflow">Scroll inside sections and slides</option>
+  <option id="scrollOverflow-reset">ScrollOverflow Reset</option>
+  <option id="lazy-load">Lazy load</option>
+  <option id="scrolling-speed">Scrolling speed</option>
+  <option id="trigger-animations">Trigger animations</option>
+  <option id="vue-fullpage">Vue-fullpage component</option>
+</select>
   <main>
 
     <!--Carousel-->
@@ -63,43 +108,16 @@
       <h1>아아아</h1>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8">
-          <div class="card my-2 mx-2 by-2 bx-2 ">
-            <h5 class="card-title">ABCD</h5>
-            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque officia repellat
-              voluptas dolorem deleniti, a exercitationem, quas libero quasi dolor incidunt delectus blanditiis, optio
-              repudiandae eaque molestiae possimus sequi quisquam.</p>
-            <a href="" class="my-2 mx-2 by-2 bx-2 btn btn-dark text-light">채용</a>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="row">
-            <div class="col">
-              <div class="card my-2 mx-2 by-2 bx-2 ">
-                <h5 class="card-title">ABCD</h5>
-                <p class="card-text">abcbakjhwehfaowehfawjeflwae</p>
-                <a href="" class="my-2 mx-2 py-2 px-2 btn btn-dark text-light">채용</a>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card my-2 mx-2 by-2 bx-2">
-                <h5 class="card-title">ABCD</h5>
-                <p class="card-text">abcbakjhwehfaowehfawjeflwae</p>
-                <a href="" class="my-2 mx-2 by-2 bx-2 btn btn-dark text-light">채용</a>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card my-2 mx-2 by-2 bx-2 ">
-                <h5 class="card-title">ABCD</h5>
-                <p class="card-text">abcbakjhwehfaowehfawjeflwae</p>
-                <a href="" class="my-2 mx-2 by-2 bx-2 btn btn-dark text-light">채용</a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div id="fullpage">
+      <div class="section active" id="section0"><h1>fullPage.js</h1></div>
+      <div class="section" id="section1">
+          <div class="slide "><h1>Simple Demo</h1></div>
+          <div class="slide active"><h1>Only text</h1></div>
+          <div class="slide"><h1>And text</h1></div>
+          <div class="slide"><h1>And more text</h1></div>
       </div>
+      <div class="section" id="section2"><h1>No wraps, no extra markup</h1></div>
+      <div class="section" id="section3"><h1>Just the simplest demo ever</h1></div>
     </div>
 
   </main>
@@ -109,6 +127,7 @@
     <img src="rangEGuard\src\main\webapp\resources\img\subicon\up-arrow.png" alt="">
   </div>
 
+  <script type="text/javascript" src="../../resources/js/fullpage.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>

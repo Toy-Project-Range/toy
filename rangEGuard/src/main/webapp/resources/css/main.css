@@ -18,4 +18,34 @@ body {
     overflow-y: scroll;
     
 }
-  
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+}
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.item1 {
+    background: #80cbc4;
+}
+.item2 {
+    background: #e6ee9c;
+}
+.item3 {
+    background: #e6ee29;
+}
