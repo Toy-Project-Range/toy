@@ -1,5 +1,4 @@
 window.addEventListener("DOMContentLoaded", function () {
-  alert("시작");
   var categoryList = `<a class="list-group-item list-group-item-action bg-primary  bg-opacity-25" href="#" onclick="categoryChange(this.id)"
     name="list-item-1" id="list-item-1">💼 커리어 고민</a>`;
   categoryList += `
