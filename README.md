@@ -121,10 +121,22 @@
 ### [03.19 : 리스트 클릭 이벤트 추가, ERD 작성](MOM/20220319.md)
 
 프론트
-
 - HTML 리스트 구성을 JS 구성
 - board.js - categoryCahne() - 클릭된 태그가 아니면 흰색, 클린된 태그라면 파란색으로 클래스 추가
-백
 
+백
 - DB erd 설계
 - Aquerytool을 이용하여 SQL로 변환
+
+### [03.22 : 메뉴바 수정, DB 연동 테스트](MOM/20220322.md)
+
+프론트
+
+- board.html : 내용, postion-fiexed 수정
+- board.js : 클릭시 html에서 postView 변경되도록 수정(innerHTML, 백틱)
+- 배너제거, navbar 일부 수정, 테마 헤더 일부 수정
+
+백
+  - mybatis lib를 이용해 CRUD 테스트
+  - spring to DB 연동
+
