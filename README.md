@@ -49,25 +49,21 @@
 ### [02.22 : 로그인페이지 구현1](MOM/20220222.md)
 
 프론트
-
 - 로그인 페이지 : 폰트, 색상, 아이콘 추가, 사진 라운드 처리
 - 메인페이지 : 카로젤, 상단바, 상단바 아이콘 추가
 
 백
-
 - pom.xml 일부 수정
 - 프로젝트 java.lang.classnotfoundexception 문제 해결(Maven 추가)
 
 ### [02.26 : 2월정리 및 서류작성](MOM/20220226.md)
 
 프론트
-
 - 메인페이지 수정 : bootstrap JS bundle 추가 -> navbar, carousel 수정, footer 추가
 - 서류 작성
 - 페이지 구성도, 로그인 페이지 구성도 작성
 
 백
-
 - Homecontroller, security-context.xml 작성
 - Model and Viuw 학습
 
