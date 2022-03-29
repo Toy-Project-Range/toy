@@ -3,9 +3,10 @@ package com.range.rangEGuard.dao;
 import java.lang.reflect.Member;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
-import com.range.rangEGuard.dto.MemberDTO;
+import com.range.rangEGuard.dto.MemberDto;
 
 public class MemberDaoImpl implements MemberDao{
 	//��ȣȭ �ؼ� hash����
@@ -23,7 +24,7 @@ public class MemberDaoImpl implements MemberDao{
 	@Override
 	public void memberInsert(String userId, String userPW, String userName) {
 		// TODO Auto-generated method stub
-		MemberDTO member = new MemberDTO();
+		MemberDto member = new MemberDto();
 		member.setuserId(userId);
 		member.setuserPw(userPW);
 		member.setuserName(userName);
@@ -45,6 +46,13 @@ public class MemberDaoImpl implements MemberDao{
 		// TODO Auto-generated method stub
 		Member member = (Member) dbMap.get(userId);
 		return member;
+	}
+
+
+	@Override
+	public List<MemberDto> selectAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

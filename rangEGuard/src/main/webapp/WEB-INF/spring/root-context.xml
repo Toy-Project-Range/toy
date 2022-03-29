@@ -10,22 +10,38 @@
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
-	
+
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<!-- MySQL dataSource -->
-    <bean id="dataSource"
-        class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url"
-            value="jdbc:mysql://183.111.161.78:3306/lion1735?useSSL=false&amp;serverTimezone=UTC">
-        </property>
-        <property name="username" value="lion1735"></property>
-        <property name="password" value="Achlrkd1735"></property>
-    </bean>        
-    
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"></property>
-    </bean>
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver"></property>
+		<property name="url"
+			value="jdbc:mysql://183.111.161.78:3306/lion1735?useSSL=false&amp;serverTimezone=UTC">
+		</property>
+		<property name="username" value="lion1735"></property>
+		<property name="password" value="Achlrkd1735"></property>
+	</bean>
 
+	<bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="configLocation"
+			value="classpath:mybatis-config.xml" />
+		<property name="mapperLocations">
+			<list>
+				<value>classpath:mappers/mapper.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="sqlSession"
+		class="org.mybatis.spring.SqlSessionTemplate"
+		destroy-method="clearCache">
+		<constructor-arg name="sqlSessionFactory"
+			ref="sqlSessionFactory" />
+	</bean>
+	<mybatis-spring:scan
+		base-package="com.src.main.resources.mappers"></mybatis-spring:scan>
 
 </beans>
