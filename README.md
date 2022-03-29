@@ -136,3 +136,15 @@
   - mybatis lib를 이용해 CRUD 테스트
   - spring to DB 연동
 
+### [03.29 : 멤버소개 , db연동(불러오기) 세팅](MOM/20220329.md)
+
+프론트
+
+- 프로필 생성
+- VSC tomcat 설정 → JSP 파일 로딩
+
+
+백
+ - DB 연동 테스트
+ - Spring에서 db연동 테스트 → mybatis, mapper, dao 등 환경 설정
+
