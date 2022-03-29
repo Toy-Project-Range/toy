@@ -5,21 +5,20 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
-import com.range.rangEGuard.daoImple.daoimple;
 import com.range.rangEGuard.dto.MemberDTO;
 
-public class MemberDAO implements daoimple{
-	//¾ÏÈ£È­ ÇØ¼­ hash»ý¼º
+public class MemberDaoImpl implements MemberDao{
+	//ï¿½ï¿½È£È­ ï¿½Ø¼ï¿½ hashï¿½ï¿½ï¿½ï¿½
 	private HashMap dbMap;
 	
-	//»ý¼ºÀÚ
-	public MemberDAO() {
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	public MemberDaoImpl() {
 		dbMap = new HashMap();
 	}
 
 	
-	//°´Ã¼ »ý¼ºÈÄ Á¤º¸ ³Ö±â
-	//hash¸Ê¿¡ ³ÖÀ»°ÅÀÓ
+	//ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö±ï¿½
+	//hashï¿½Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	
 	@Override
 	public void memberInsert(String userId, String userPW, String userName) {
@@ -40,7 +39,7 @@ public class MemberDAO implements daoimple{
 		}
 	}
 	
-	//´©°¡ Ã£À¸¸é userId·Î Á¤º¸ °¡Á®¿À±â
+	//ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ï¿½ï¿½ userIdï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	@Override
 	public Member memberSelect(String userId, String userPw) {
 		// TODO Auto-generated method stub

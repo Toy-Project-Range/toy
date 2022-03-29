@@ -1,5 +1,5 @@
 package com.range.rangEGuard.service;
 
-public class MainService {
+public interface MainService {
 
 }

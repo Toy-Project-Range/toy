@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.range.rangEGuard.service.MemberService;
+import com.range.rangEGuard.service.MemberServiceImpl;
 
 public class MemberController {
 	@Autowired
-	MemberService service;
+	MemberServiceImpl service;
 
 	// join 페이지 요청이 들어오면
 	// 요청한 페이지에서 사용자 정보(userId, userPw, userName)을 받아와서

@@ -1,8 +1,8 @@
-package com.range.rangEGuard.daoImple;
+package com.range.rangEGuard.dao;
 
 import java.lang.reflect.Member;
 
-public interface daoimple {
+public interface MemberDao {
 	void memberInsert(String userId, String userPW, String userName);
 	Member memberSelect(String userId, String userPw);
 }
