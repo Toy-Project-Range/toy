@@ -10,13 +10,8 @@
             <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
             <meta name="generator" content="Hugo 0.84.0">
             <title>RangE Community</title>
-
-
-
             <link href="${path}/resources/js/bootstrap.min.css" rel="stylesheet">
             <link href="${path}/resources/css/login.css" rel="stylesheet">
-
-
             <!-- <script>
                 function btnLogin() {
                     var loginForm = document.formSubmit;
@@ -41,12 +36,14 @@
                         width="200" height="200">
                     <h1 class="h3 mb-3 fw-normal">쉿 아무도 몰라</h1>
                     <div class="form-floating">
-                        <input type="email" class="form-control" name = "floatingInput" id="floatingInput" placeholder="name@example.com">
+                        <input type="email" class="form-control" name="floatingInput" id="floatingInput"
+                            placeholder="name@example.com">
                         <label for="floatingInput"><img class="" src="${path}/resources/img/icon/account.png" alt=""
                                 width="18" height="18">아이디</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control" name = "floatingPassword" id="floatingPassword" placeholder="Password">
+                        <input type="password" class="form-control" name="floatingPassword" id="floatingPassword"
+                            placeholder="Password">
                         <label for="floatingPassword"><img class="" src="${path}/resources/img/icon/password.png" alt=""
                                 width="15" height="15">비밀번호</label>
                     </div>
