@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.range.rangEGuard.mapper.memberMapper">
+
+
+	<resultMap type="MemberDto" id="userMap">
+		<result column = "id" property="userId"/>
+		<result column = "pwd" property="userPw"/>
+	</resultMap>
+
+	<!-- 모든목록조회 -->
+	<select id = "selectAll" resultMap = "userMap">
+		SELECT * FROM range_member;
+	</select>
+	
+<!-- 	<select id = "searchById" resultMap = "userMap"> -->
+<!-- 		SELECT * FROM range_member WHERE  -->
+<!-- 	</select> -->
+</mapper>

@@ -9,6 +9,11 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.range.rangEGuard.dao.MemberDao;
+import com.range.rangEGuard.dto.MemberDto;
+
+
+//git Test Ahyun
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/**/root-context.xml" })
 public class MyBatisTest {
@@ -30,6 +35,7 @@ public class MyBatisTest {
 		try (SqlSession session = sqlFactory.openSession()) {
 			System.out.println(" >>>>>>>>>> session Ãâ·Â : " + session + "\n");
 
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

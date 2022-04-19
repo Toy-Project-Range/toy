@@ -33,6 +33,13 @@ public class MemberDto {
 		this.userPw = userPw;
 		this.userName = userName;
 	}
+	
+	public MemberDto(String userId, String userPw) {
+		super();
+		this.userId = userId;
+		this.userPw = userPw;
+		this.userName = userId;
+	}
 	public MemberDto() {
 		
 	}

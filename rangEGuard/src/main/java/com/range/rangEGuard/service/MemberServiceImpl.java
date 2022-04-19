@@ -1,32 +1,29 @@
 package com.range.rangEGuard.service;
 
 import java.lang.reflect.Member;
+import java.util.List;
+
+import javax.inject.Inject;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import com.range.rangEGuard.dao.MemberDao;
 import com.range.rangEGuard.dao.MemberDaoImpl;
+import com.range.rangEGuard.dto.MemberDto;
 
+@Service
 public class MemberServiceImpl implements MemberService {
 	
-	@Autowired
-	MemberDaoImpl dao;
-	
-	//userId, userPw, userName�� �޾Ƽ�
-	//dao�����ؼ� member�־��ֱ�
+	@Inject
+	private MemberDao dao;
+
 	@Override
-	public void memberRegister(String userId, String userPw, String userName) {
+	public List<MemberDto> selectAll() {
 		// TODO Auto-generated method stub
-		dao.memberInsert(userId, userPw, userName);
+		return dao.selectAll();
 	}
 
-	
-	//userId, userPw�� �޾Ƽ�
-	//dao�� �ش� ����ִ��� Ȯ��
-	@Override
-	public Member memberSearch(String userId, String userPw) {
-		// TODO Auto-generated method stub
-		Member member = dao.memberSelect(userId, userPw);
-		return member;
-	}
+
 	
 }

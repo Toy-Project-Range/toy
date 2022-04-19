@@ -16,9 +16,9 @@
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName"
-			value="com.mysql.jdbc.Driver"></property>
+			value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
 		<property name="url"
-			value="jdbc:mysql://183.111.161.78:3306/lion1735?useSSL=false&amp;serverTimezone=UTC">
+			value="jdbc:log4jdbc:mysql://183.111.161.78:3306/lion1735?useSSL=false&amp;serverTimezone=UTC">
 		</property>
 		<property name="username" value="lion1735"></property>
 		<property name="password" value="Achlrkd1735"></property>
@@ -27,14 +27,10 @@
 	<bean id="sqlSessionFactory"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
-		<property name="configLocation"
-			value="classpath:mybatis-config.xml" />
-		<property name="mapperLocations">
-			<list>
-				<value>classpath:mappers/mapper.xml</value>
-			</list>
-		</property>
+		<property name="configLocation" value="classpath:/mybatis-config.xml"></property>
+        <property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml"></property>
 	</bean>
+	
 	<bean id="sqlSession"
 		class="org.mybatis.spring.SqlSessionTemplate"
 		destroy-method="clearCache">
@@ -43,5 +39,7 @@
 	</bean>
 	<mybatis-spring:scan
 		base-package="com.src.main.resources.mappers"></mybatis-spring:scan>
+	<context:component-scan base-package="com.range.rangEGuard.dao"></context:component-scan>
+	<context:component-scan base-package="com.range.rangEGuard.service"></context:component-scan>
 
 </beans>
