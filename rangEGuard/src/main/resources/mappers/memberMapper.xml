@@ -14,5 +14,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id = "selectAll" resultMap = "userMap">
 		SELECT * FROM range_member;
 	</select>
-
+	
+<!-- 	<select id = "searchById" resultMap = "userMap"> -->
+<!-- 		SELECT * FROM range_member WHERE  -->
+<!-- 	</select> -->
 </mapper>
