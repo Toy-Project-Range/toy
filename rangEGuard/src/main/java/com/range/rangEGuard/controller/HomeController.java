@@ -1,9 +1,13 @@
 package com.range.rangEGuard.controller;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.Locale;
 
+import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.jasper.tagplugins.jstl.core.ForEach;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -12,6 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.range.rangEGuard.dto.MemberDto;
+import com.range.rangEGuard.service.MemberService;
 
 /**
  * Handles requests for the application home page.
@@ -24,60 +31,29 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-
-	@RequestMapping("/")
-	public ModelAndView home() {
-		ModelAndView mav = new ModelAndView();
-
-		mav.addObject("serverContry", "Korea");
-		mav.setViewName("login");
-
-		return mav;
-	}
-
-	@RequestMapping("/login.do")
-	public ModelAndView login() {
-		ModelAndView mav = new ModelAndView();
-
-		mav.addObject("data", "login");
-		mav.setViewName("login");
-
-		return mav;
-	}
-
-	// login 페이지에서 로그인을 위해서 id랑 pw를 입력후에 jsp에서 버튼을 누르면
-	// /loginProc여기 들어와서 사용자가 입력한 값들을 저장
-	// 실제로 우리 member인지 확인
-	@RequestMapping(value = "/loginProc", method = RequestMethod.POST)
-	public ModelAndView loginChk(@RequestParam("floatingInput") String userId
-            , @RequestParam("floatingPassword") String userPw) throws Exception {
-		System.out.println(userId);
-		System.out.println(userPw);
-
-		ModelAndView mav = new ModelAndView();
-		if (userId.equals("a@naver.com")) {
-			if (userPw.equals("b")) {
-				System.out.println("ok있음");
-				mav.setViewName("main");
-				return mav;
-			}
+	@Inject
+	private MemberService service;
+	
+	@RequestMapping(value="/login.do", method = RequestMethod.GET)
+	public String home(Locale locale, Model model) throws Exception{
+		logger.info("home");
+		List<MemberDto> memberList = service.selectAll();
+		for (MemberDto memberDto : memberList) {
+			System.out.println(memberDto);
 		}
-
-//  		Member member = service.memberSearch(userId, userPw);
-
-		System.out.println("실패");
-		mav.setViewName("login"); // 酉곗쓽 �씠由�
-		return mav;
+		model.addAttribute("memberList",memberList);
+		
+		return "home";
 	}
-
-//    @RequestMapping(value="/loginProc", method = RequestMethod.POST)
-//    public ModelAndView loginChk(@RequestParam("floatingInput") String userId
-//            , @RequestParam("floatingPassword") String userPw) throws Exception {
-//    	System.out.println(userId);
-////    	String userId = req.getParameter("userId");
-////    	System.out.println(userId);
-//        ModelAndView mav = new ModelAndView();
-//            mav.setViewName("main"); // 酉곗쓽 �씠由�
-//        return mav;
-//    }
+	
+//	@RequestMapping("/login.do")
+//	public ModelAndView login() {
+//		ModelAndView mav = new ModelAndView();
+//
+//		
+//		mav.addObject("data", "login");
+//		mav.setViewName("login");
+//
+//		return mav;
+//	}
 }

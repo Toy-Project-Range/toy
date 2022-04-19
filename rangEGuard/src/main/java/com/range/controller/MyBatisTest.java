@@ -34,10 +34,8 @@ public class MyBatisTest {
 
 		try (SqlSession session = sqlFactory.openSession()) {
 			System.out.println(" >>>>>>>>>> session Ãâ·Â : " + session + "\n");
-			MemberDao dao = session.getMapper(MemberDao.class);
-			for (MemberDto a : dao.selectAll()) {
-				System.out.println(a);
-			}
+
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

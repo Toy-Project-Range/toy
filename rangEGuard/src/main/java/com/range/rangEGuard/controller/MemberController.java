@@ -29,7 +29,7 @@ public class MemberController {
 		String userPw = request.getParameter("userPw");
 		String userName = request.getParameter("userName");
 
-		service.memberRegister(userId, userPw, userName);
+
 		mav.addObject("userId", userId);
 		mav.addObject("userPw", userPw);
 		mav.addObject("userName", userName);
