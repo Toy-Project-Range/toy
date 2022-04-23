@@ -36,7 +36,7 @@
                         width="200" height="200">
                     <h1 class="h3 mb-3 fw-normal">쉿 아무도 몰라</h1>
                     <div class="form-floating">
-                        <input type="email" class="form-control" name="floatingInput" id="floatingInput"
+                        <input type="text" class="form-control" name="floatingInput" id="floatingInput"
                             placeholder="name@example.com">
                         <label for="floatingInput"><img class="" src="${path}/resources/img/icon/account.png" alt=""
                                 width="18" height="18">아이디</label>

@@ -5,20 +5,23 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
 	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd
 		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
-		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
+	<context:component-scan base-package="com.range.rangEGuard.model.service"></context:component-scan>
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<!-- MySQL dataSource -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName"
-			value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
+			value="com.mysql.cj.jdbc.Driver"></property>
 		<property name="url"
-			value="jdbc:log4jdbc:mysql://183.111.161.78:3306/lion1735?useSSL=false&amp;serverTimezone=UTC">
+			value="jdbc:mysql://183.111.161.78:3306/lion1735?useSSL=true&amp;serverTimezone=UTC">
 		</property>
 		<property name="username" value="lion1735"></property>
 		<property name="password" value="Achlrkd1735"></property>
@@ -27,8 +30,15 @@
 	<bean id="sqlSessionFactory"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
-		<property name="configLocation" value="classpath:/mybatis-config.xml"></property>
-        <property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml"></property>
+		<!-- 여기서 typealiasespackage속성을 통해 dto안에 있는 모든 dto클래스들을 첫글자 소문자로 등록해줌 -->
+		<property name="typeAliasesPackage" value="com.range.rangEGuard.model.dto"></property>
+        <property name="mapperLocations" value="classpath:mappers/*Mapper.xml"></property>
+	</bean>
+	
+	<bean class="org.mybatis.spring.mapper.MapperFactoryBean" id = "userDao">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+		<property name="mapperInterface"
+			value="com.range.rangEGuard.model.dao.MemberDao"></property>
 	</bean>
 	
 	<bean id="sqlSession"
@@ -37,9 +47,16 @@
 		<constructor-arg name="sqlSessionFactory"
 			ref="sqlSessionFactory" />
 	</bean>
-	<mybatis-spring:scan
-		base-package="com.src.main.resources.mappers"></mybatis-spring:scan>
-	<context:component-scan base-package="com.range.rangEGuard.dao"></context:component-scan>
-	<context:component-scan base-package="com.range.rangEGuard.service"></context:component-scan>
+
+		<!-- 1. transactionManager를 dataSource를 먹여서 생성해서 빈으로 등록. -->
+	<bean
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+		id="transactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<!-- 0. transaction에 대해 annotation-driven -->
+	<tx:annotation-driven
+		transaction-manager="transactionManager" />
 
 </beans>

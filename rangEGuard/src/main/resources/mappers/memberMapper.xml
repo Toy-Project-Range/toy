@@ -2,20 +2,52 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace = "com.range.rangEGuard.mapper.memberMapper">
-
-
-	<resultMap type="MemberDto" id="userMap">
-		<result column = "id" property="userId"/>
-		<result column = "pwd" property="userPw"/>
+<mapper namespace = "com.range.rangEGuard.model.dao.MemberDao">
+	<!-- db 데이터와 dto가 다르므로 맵 만들어줘야함 -->
+	<resultMap type="memberDto" id="memberMap">
+		<result column="seq" property="seq"/>
+		<result column="id" property="id"/>
+		<result column="pw" property="pw"/>
+		<result column="profile_name" property="profileName"/>
+		<result column="profile_uri" property="profileUri"/>
+		<result column="tier" property="tier"/>
+		<result column="stack" property="stack"/>
+		<result column="language" property="language"/>
+		<result column="info" property="info"/>
 	</resultMap>
-
-	<!-- 모든목록조회 -->
-	<select id = "selectAll" resultMap = "userMap">
-		SELECT * FROM range_member;
-	</select>
 	
-<!-- 	<select id = "searchById" resultMap = "userMap"> -->
-<!-- 		SELECT * FROM range_member WHERE  -->
-<!-- 	</select> -->
+	<!-- 유저에서 필요한 함수 -->
+	<!-- 
+		1. 로그인
+		2. 로그아웃
+		3. 유저조회
+		4. 유저 수정
+		5. 
+	 -->
+	 <!-- 유저 생성 -->
+	<insert id="insertMember" parameterType="MemberDto">
+		INSERT INTO range_member VALUES(0,#{id}, #{pw}, #{profileName}, #{profileUri}, #{tier}, #{stack},#{language}, #{info})
+	</insert>
+	
+	<!-- 아이디로 유저 조회(로그인) -->
+	<select id="searchById" parameterType = "String" resultMap = "memberMap">
+		SELECT * FROM range_member WHERE id=#{id}
+	</select>
+	<!-- 모든 유저 조회 -->
+	<select id="selectAll" resultMap = "memberMap">
+		SELECT * FROM range_member
+	</select>
+	<!-- 마이페이지 수정 -->
+	<update id="updateMember" parameterType = "MemberDto">
+		UPDATE range_member
+		SET
+		pw = #{pw},
+		profile_name = #{profileName},
+		profile_uri = #{profileUri},
+		tier = #{tier},
+		stack = #{stack},
+		language = #{language},
+		info  = #{info}
+		WHERE id = #{id}
+	</update>
 </mapper>

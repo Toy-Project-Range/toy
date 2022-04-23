@@ -17,8 +17,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.range.rangEGuard.dto.MemberDto;
-import com.range.rangEGuard.service.MemberService;
+import com.range.rangEGuard.model.dto.MemberDto;
+import com.range.rangEGuard.model.service.MemberService;
+import com.range.rangEGuard.util.SHA256;
 
 /**
  * Handles requests for the application home page.
@@ -34,26 +35,9 @@ public class HomeController {
 	@Inject
 	private MemberService service;
 	
-	@RequestMapping(value="/login.do", method = RequestMethod.GET)
+	@RequestMapping(value="/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) throws Exception{
-		logger.info("home");
-		List<MemberDto> memberList = service.selectAll();
-		for (MemberDto memberDto : memberList) {
-			System.out.println(memberDto);
-		}
-		model.addAttribute("memberList",memberList);
-		
-		return "home";
+		return "login";
 	}
-	
-//	@RequestMapping("/login.do")
-//	public ModelAndView login() {
-//		ModelAndView mav = new ModelAndView();
-//
-//		
-//		mav.addObject("data", "login");
-//		mav.setViewName("login");
-//
-//		return mav;
-//	}
+
 }
