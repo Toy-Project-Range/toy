@@ -25,7 +25,9 @@ public class MemberController {
 
 	@PostMapping("loginProc")
 	public String login(HttpSession session, String floatingInput, String floatingPassword) throws Exception{
-		System.out.println("1");
+		System.out.println(floatingInput);
+		System.out.println(floatingPassword);
+		System.out.println(memberService.searchById(floatingInput));
 		MemberDto member = memberService.login(floatingInput, floatingPassword);
 		if(member!=null) {
 			session.setAttribute("user", member);

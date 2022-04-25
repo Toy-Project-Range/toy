@@ -19,9 +19,9 @@
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName"
-			value="com.mysql.cj.jdbc.Driver"></property>
+			value="org.mariadb.jdbc.Driver"></property>
 		<property name="url"
-			value="jdbc:mysql://183.111.161.78:3306/lion1735?useSSL=true&amp;serverTimezone=UTC">
+			value="jdbc:mariadb://183.111.138.214:3306/lion1735?serverTimezone=UTC">
 		</property>
 		<property name="username" value="lion1735"></property>
 		<property name="password" value="Achlrkd1735"></property>
@@ -32,7 +32,7 @@
 		<property name="dataSource" ref="dataSource"></property>
 		<!-- 여기서 typealiasespackage속성을 통해 dto안에 있는 모든 dto클래스들을 첫글자 소문자로 등록해줌 -->
 		<property name="typeAliasesPackage" value="com.range.rangEGuard.model.dto"></property>
-        <property name="mapperLocations" value="classpath:mappers/*Mapper.xml"></property>
+        <property name="mapperLocations" value="classpath:/mappers/**/*Mapper.xml"></property>
 	</bean>
 	
 	<bean class="org.mybatis.spring.mapper.MapperFactoryBean" id = "userDao">

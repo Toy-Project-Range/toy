@@ -25,7 +25,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		5. 
 	 -->
 	 <!-- 유저 생성 -->
-	<insert id="insertMember" parameterType="MemberDto">
+	<insert id="insertMember" parameterType="memberDto">
 		INSERT INTO range_member VALUES(0,#{id}, #{pw}, #{profileName}, #{profileUri}, #{tier}, #{stack},#{language}, #{info})
 	</insert>
 	
@@ -38,7 +38,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		SELECT * FROM range_member
 	</select>
 	<!-- 마이페이지 수정 -->
-	<update id="updateMember" parameterType = "MemberDto">
+	<update id="updateMember" parameterType = "memberDto">
 		UPDATE range_member
 		SET
 		pw = #{pw},

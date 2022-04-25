@@ -37,6 +37,7 @@ public class HomeController {
 	
 	@RequestMapping(value="/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) throws Exception{
+		System.out.println(new SHA256().getHash("dldkgus"));
 		return "login";
 	}
 
