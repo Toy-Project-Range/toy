@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>RangE Community</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+
+    <!--jquery-->
+    <link rel="stylesheet" type="text/css" href="../../resources/css/fullpage.css" />
+
+    <!--icon-->
+    <link rel="shortcut icon" href="../../resources/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="../../resources/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../resources/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../resources/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../resources/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../resources/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../resources/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../resources/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../resources/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../resources/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../resources/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../resources/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../resources/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../resources/img/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- <link href="../../resources/css/main.css" rel="stylesheet"> -->
+    <link href="../../resources/css/board.css" rel="stylesheet">
+    <link href="../../resources/js/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!--navbar-->
+        <nav class="navbar navbar-expand-md navbar-light" style="box-shadow: 2px 2px 2px 2px gray;">
+            <div class="container-fluid my-2">
+                <a class="navbar-brand" href="../main.html">RangeGuardians</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"> <a class="nav-link" aria-current="page" href="../main.html">Home</a> </li>
+                        <li class="nav-item"> <a class="nav-link"
+                                href="../algorithmBoard/algorithmList.html">Algorithm</a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link "
+                                href="../lectureBoard/conferenceList.html">LecturBoard</a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link"
+                                href="../lectureBoard/conferenceList.html">MiniBoard</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex justify-content-end mt-2">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <a type="button" class="btn nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src="../../resources/img/subicon/account.png" alt="" width="25" height="25">
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!--modal-->
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">PROFILE</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src=https://via.placeholder.com/150X100 class="card-img-top" alt="...">
+                        <h5 class="card-title text-center my-5">랑이멜이</h5>
+                        <div>
+                            <div class="row my-3 mx-5">
+                                <div class="col col-4 text-center fw-bold">
+                                    지역
+                                </div>
+                                <div class="col com-8 text-center">
+                                    서울시 서대문구 연남동
+                                </div>
+                            </div>
+                            <div class="row my-3 mx-5">
+                                <div class="col col-4 text-center align-content-center fw-bold">
+                                    직무
+                                </div>
+                                <div class="col com-8 align-content-center text-center">
+                                    algorithm <br>
+                                    back-end
+                                </div>
+                            </div>
+                            <div class="row my-3 mx-5">
+                                <div class="col col-4 text-center fw-bold">
+                                    나이
+                                </div>
+                                <div class="col com-8 text-center">
+                                    27
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <!--accodion-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        💼 CAREERS
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="card">
+                                            <a href="#" src="#"></a>
+                                            <div class="card-body">
+                                                <div class="card-text">Infra</div>
+                                                <button type="button"
+                                                    class="btn btn-secondary btn-primary btn-sm d-none"
+                                                    disabled>Front-End</button>
+                                                <button type="button" class="btn btn-secondary btn-lg btn-sm d-none"
+                                                    disabled>Back-End</button>
+                                                <button type="button" class="btn btn-secondary btn-lg btn-sm"
+                                                    disabled>Django</button>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="card-text">Algorithm</div>
+                                                <button type="button" class="btn btn-secondary btn-lg btn-sm d-none"
+                                                    disabled>Flatinum</button>
+                                                <button type="button"
+                                                    class="btn btn-secondary btn-primary btn-sm d-none"
+                                                    disabled>Gold</button>
+                                                <button type="button" class="btn btn-secondary btn-lg btn-sm"
+                                                    disabled>Silver</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            🌈 PHOTOS
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-7">
+                                                        <div class="card my-2 mx-2 by-2 bx-2 ">
+                                                            <img src=https://via.placeholder.com/100X240
+                                                                class="card-img-top" alt="...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <div class="row">
+                                                            <div class="card my-2 by-2 ">
+                                                                <img src=https://via.placeholder.com/100
+                                                                    class="card-img-top" alt="...">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="card my-2 by-2 ">
+                                                                <img src=https://via.placeholder.com/100
+                                                                    class="card-img-top" alt="...">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="card my-2 by-2 ">
+                                                                <img src=https://via.placeholder.com/100
+                                                                    class="card-img-top" alt="...">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="card-text my-5 mx-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Dicta officia nemo eligendi quasi expedita qui optio quod? Id, molestias qui officia et
+                                doloribus, doloremque hic, quisquam iusto cumque iure dolorum.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Log out</button>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+            </div>
+    </header>
