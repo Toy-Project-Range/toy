@@ -17,19 +17,17 @@ window.addEventListener("DOMContentLoaded", function () {
     <a class="list-group-item list-group-item-action" href="#" onclick="categoryChange(this.id)"
         name="list-item-2" id="list-item-2">🍗 일상</a>
     <a class="list-group-item list-group-item-action" href="#" onclick="categoryChange(this.id)"
-        name="list-item-3" id="list-item-3">✍ 고민</a>
+        name="list-item-3" id="list-item-3">✍ QnA</a>
     <a class="list-group-item list-group-item-action" href="#" onclick="categoryChange(this.id)"
         name="list-item-4" id="list-item-4">🍯 꿀팁</a>
     <a class="list-group-item list-group-item-action" href="#" onclick="categoryChange(this.id)"
-        name="list-item-5" id="list-item-5">📝 SNS</a>
+        name="list-item-5" id="list-item-5">📝 취업정보</a>
     <a class="list-group-item list-group-item-action" href="#" onclick="categoryChange(this.id)"
-        name="list-item-6" id="list-item-6">🌱 문제추천</a>
+        name="list-item-6" id="list-item-6">🌱 추천</a>
     <a class="list-group-item list-group-item-action" href="#" onclick="categoryChange(this.id)"
-        name="list-item-7" id="list-item-7">💻 취업정보</a>
+        name="list-item-7" id="list-item-7">💻 IT 뉴스</a>
     <a class="list-group-item list-group-item-action" href="#" onclick="categoryChange(this.id)"
-        name="list-item-8" id="list-item-8">🎶 노래</a>
-    <a class="list-group-item list-group-item-action" href="#" onclick="categoryChange(this.id)"
-        name="list-item-9" id="list-item-9">🎮 끝말잇기</a>`;
+        name="list-item-8" id="list-item-8">🎶 IT 기기추천</a>`;
   $("#list-category").empty().append(categoryList);
 });
 
