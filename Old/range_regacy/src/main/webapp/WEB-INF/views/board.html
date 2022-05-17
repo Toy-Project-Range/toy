@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>RangE Community</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+
+    <!--jquery-->
+    <link rel="stylesheet" type="text/css" href="../../resources/css/fullpage.css" />
+
+    <!--icon-->
+    <link rel="shortcut icon" href="../../resources/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="../../resources/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../resources/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../resources/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../resources/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../resources/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../resources/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../resources/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../resources/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../resources/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../resources/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../resources/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../resources/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../resources/img/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- <link href="../../resources/css/main.css" rel="stylesheet"> -->
+    <link href="../../resources/css/board.css" rel="stylesheet">
+    <link href="../../resources/js/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="background-color:#f8f8fa;">
+    <div class="mb-3 bg-white" onload-html="../base/theme.html"></div>
+
+    <main class="h-100">
+        <div class="row mt-3 pt-5 ">
+
+            <!-- 메뉴바 -->
+            <div id="list-category" class="col-2 list-group position-fixed" style="left:5%; max-width: 200px;">
+            </div>
+
+            <!-- 메인 컨텐츠 -->
+            <div class="position-absolute" style="left: 25%; max-width: 800px;">
+                <div class="justify-content-md-center w-75 border" style="background-color: white;height: 100%;">
+                    <div id="postView">
+                        <div class="m-3 mb-0">📆 출석</div></br>
+                        <div class="ms-5">안녕하세요 출석체크 페이지입니다.</div>
+                    </div>
+                    <hr>
+                    <form class="row justify-content-center mt-3">
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="inputComment" placeholder="자유롭게 이야기해주세요.">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-dark p-1" id="commentBtn" onclick="enterComment()">
+                                <svg width="24" height="24">
+                                    <path fill="currentColor"
+                                        d="M17.21 2.23a.75.75 0 0 1 1.07-.01l3.5 3.5a.75.75 0 0 1 .011 1.05l-12 12.5a.75.75 0 1 1-1.082-1.04l8.062-8.398-2.451-2.451L4.5 17.553V20h2.75a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1-.75-.75v-3.5a.75.75 0 0 1 .21-.52zm.55 1.59-2.397 2.482 2.447 2.447 2.39-2.488-2.44-2.441z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                    <hr>
+                    <div class="" id="">
+                        <ul id="comments">
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+                            <li><b>강&nbsp;</b>안녕하세요</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="../../resources/js/board.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../base/onload.js"></script>
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+로그인페이지 
+    - 로그인페이지 (login.html)
+
+메인페이지
+    - 메인페이지 (main.html)
+
+마이페이지
+    - 마이페이지(개인정보, SNS, 쓴 글보기) (mypage.html)
+
+base
+    - 헤더
+    - 푸터
+
+강사 페이지 (lecturtBoard)
+    - 공지사항, 자유 게시판 (notice, note)
+        -> 리스트(List) 페이지, 디테일(Detail) 페이지 ,작성(Create) 페이지, 수정(update) 페이지
+    - URL 게시판 , 대회 게시판
+        -> 리스트 페이지, 디테일 페이지 ,작성 페이지, 수정 페이지
+
+알고리즘 페이지 (algorithmBoard)
+    - 알고리즘 리스트 페이지 (algorithmList.html)
+    - 알고리즘 작성 페이지 (algorithmCreate.html)
+    - 알고리즘 세부 페이지 (algorithmDetail.html)
+    - 알고리즘 수정 페이지 (algorithmUpdate.html)
+
+보드 게시판 (miniBoard)
+    - 보드게시판 -> 종류별로 DB에서 조회해서 그거에 맞게 뿌려주면됨.
+    - 보드게시판 클릭했을때 모달 페이지
+
